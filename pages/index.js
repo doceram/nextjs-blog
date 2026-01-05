@@ -18,7 +18,7 @@ export default function Home({ allPostsData }) {
         </p>
         <p>
           (This is a sample website - I build few days ago{" "}
-          <a href="/posts/first-post">Go to first post</a>.)
+          <Link href={`/posts/${allPostsData[0].id}`}>Go to first post</Link>.)
         </p>
       </section>
 
