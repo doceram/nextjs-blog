@@ -41,6 +41,7 @@ export default function Home({ allPostsData }) {
   );
 }
 
+// this function fetches necessary data for the home page and passes it as props
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData();
   return {

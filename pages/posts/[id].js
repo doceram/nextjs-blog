@@ -33,6 +33,7 @@ export default function Post({ postData }) {
   );
 }
 
+// this function is used to specify dynamic routes to pre-render pages based on data
 export async function getStaticPaths() {
   const paths = getAllPostsId();
   return {
@@ -41,6 +42,7 @@ export async function getStaticPaths() {
   };
 }
 
+// this function fetches necessary data for the post with the given id
 export async function getStaticProps({ params }) {
   const postData = await getPostData(params.id);
   return {
