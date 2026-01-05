@@ -18,7 +18,7 @@ export default function Home({ allPostsData }) {
         </p>
         <p>
           (This is a sample website - I build few days ago{" "}
-          <a href="/posts/first-post">Go to first post</a>.)
+          <Link href={`/posts/${allPostsData[0].id}`}>Go to first post</Link>.)
         </p>
       </section>
 
@@ -41,6 +41,7 @@ export default function Home({ allPostsData }) {
   );
 }
 
+// this function fetches necessary data for the home page and passes it as props
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData();
   return {
